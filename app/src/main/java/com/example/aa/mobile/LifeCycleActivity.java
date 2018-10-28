@@ -16,7 +16,7 @@ public class LifeCycleActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_life_cycle);
 
         Toast.makeText(this, "onCreate 호출됨", Toast.LENGTH_SHORT).show();
 

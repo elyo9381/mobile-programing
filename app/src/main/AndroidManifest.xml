@@ -17,9 +17,21 @@
             </intent-filter>
         </activity>
         <activity android:name=".Main2Activity" />
-        <activity android:name=".LifeCycleActivity" />
+        <activity android:name=".LifeCycleActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".LifeIntentActivity" />
-        <activity android:name=".CalActivity" />
+        <activity android:name=".CalActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".CaIntentActivity"></activity>
     </application>
 
