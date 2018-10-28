@@ -66,4 +66,5 @@ public class CaIntentActivity extends AppCompatActivity implements View.OnClickL
         setResult(RESULT_OK, resultIntent);
         finish();
     }
+
 }

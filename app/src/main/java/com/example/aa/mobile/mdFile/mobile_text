@@ -1,0 +1,36 @@
+명시적 인텐트 : 인텐트에 클래스 객체나 컴포넌트 이름을 지정하여 호출할 대상을 확실히 알수 있는 경우
+
+암시적 인텐트 액션과 데이터를 지정하긴 했지만 호출할 대상이 달라질수 있는경우
+
+
+액티비티 스택 :
+안드로이트 시스템은 액티비티를 액티비티 스택을 통해 관리한다. 하나의 액티비티가 갖고 있는 화면 구성이나 기능의 정보를 의미한다.
+
+
+<FLAG_ACTIVITY_SINGLE_TOP>:
+동일한 Activity stack에 연속으로 Activity가 발생하면 동일한 Activity를 제거하는 flag입니다. (존재하던 Activity를 재사용 하게됨)
+
+<FLAG_ACTIVITY_CLEAR_TOP>:
+처음 생성된 Activity와 현재 작동중인 Activity를 제외한 나머지 Activity를 제거한다.
+
+<FLAG_ACTIVITY_NO_HISTORY>:
+flag를 적용한 Activity에서 back키를 작동하면 적용된 Activity 이전 Activity으로 돌아가며, Activity Stack에서 제거된다.
+If set, the new activity is not kept in the history stack.
+
+
+서비스  :
+프로세스가 종료되어도 시스템에서 자동으로 재시작함 (화면이 없는 백그라운드로 실행됨)
+
+START_NOT_STICKY :
+시스템이 서비스를 종료시키면 인텐트가 올 때 까지 서비스를 재생성하지 않는다.
+
+START_SITCKY :
+시스템이 서비스를 종료시키면 서비스를 재시작하고 onStartCommand()를 호출한다. 인텐트를 다시 보내지 않는다.
+
+
+START_REDELIVER_INTENT :
+시스템이 서비스를 종료시키면 전달된 마지막 인텐트와 함께 서비스를 재시작 하고 onStartCommand()를 호출한다.
+
+브로드캐스트 수신자 :
+하나의 객체를 여러개의 객체에 전달하는 방식을 브로드캐스팅 이라 한다.
+브로트캐스트 수신자를 새로 만들게 되면,  manifast에 추가해 주어햐 한다.

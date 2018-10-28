@@ -11,6 +11,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class LifeCycleActivity extends AppCompatActivity {
+
     EditText nameInput;
 
     @Override
@@ -18,7 +19,7 @@ public class LifeCycleActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_life_cycle);
 
-        Toast.makeText(this, "onCreate 호출됨", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "onCreate 호출됨", Toast.LENGTH_LONG).show();
 
         nameInput = (EditText) findViewById(R.id.nameInput);
     }
@@ -31,29 +32,28 @@ public class LifeCycleActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-
-        Toast.makeText(this, "onStart 호출됨", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "onStart 호출됨", Toast.LENGTH_LONG).show();
     }
 
     @Override
     protected void onStop() {
         super.onStop();
 
-        Toast.makeText(this, "onStop 호출됨", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "onStop 호출됨", Toast.LENGTH_LONG).show();
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
 
-        Toast.makeText(this, "onDestroy 호출됨", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "onDestroy 호출됨", Toast.LENGTH_LONG).show();
     }
 
     @Override
     protected void onPause() {
         super.onPause();
 
-        Toast.makeText(this, "onPause 호출됨", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "onPause 호출됨", Toast.LENGTH_LONG).show();
 
         saveState();
     }
@@ -62,7 +62,7 @@ public class LifeCycleActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
 
-        Toast.makeText(this, "onResume 호출됨", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "onResume 호출됨", Toast.LENGTH_LONG).show();
 
         restoreState();
     }
