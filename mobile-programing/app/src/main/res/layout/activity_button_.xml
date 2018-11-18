@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".Button_Activity">
+
+    <Button
+        android:layout_marginBottom="20dp"
+        android:id="@+id/announcement_btn"
+        android:gravity="center"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="컴알못\n꿀정보" />
+
+    <Button
+        android:id="@+id/recommend_btn"
+        android:textSize="20sp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="노트북 추천" />
+
+    <Button
+        android:id="@+id/review_btn"
+        android:textSize="20sp"
+        android:layout_width="200dp"
+        android:layout_marginTop="25dp"
+        android:layout_height="wrap_content"
+        android:text="사용 후기" />
+
+</LinearLayout>
