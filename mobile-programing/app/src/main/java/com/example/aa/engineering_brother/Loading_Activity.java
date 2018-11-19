@@ -1,10 +1,10 @@
 package com.example.aa.engineering_brother;
 
-import android.content.Intent;
-import android.os.Handler;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+        import android.content.Intent;
+        import android.os.Handler;
+        import android.support.v7.app.ActionBar;
+        import android.support.v7.app.AppCompatActivity;
+        import android.os.Bundle;
 
 public class Loading_Activity extends AppCompatActivity {
 
@@ -30,7 +30,7 @@ public class Loading_Activity extends AppCompatActivity {
                 finish();
             }
 
-        }, 2000);
+        },2000);
     }
 
     private void hideActionBar() {
