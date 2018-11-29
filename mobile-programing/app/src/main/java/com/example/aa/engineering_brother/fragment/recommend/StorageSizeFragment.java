@@ -27,8 +27,8 @@ public class StorageSizeFragment extends Fragment {
         // Inflate the layout for this fragment
         ViewGroup view = (ViewGroup)inflater.inflate(R.layout.fragment_storage_size, container, false);
 
-        Button battery_btn1 = (Button) view.findViewById(R.id.battery_btn1);
-        battery_btn1.setOnClickListener(new View.OnClickListener(){
+        Button size_btn1 = (Button) view.findViewById(R.id.size_btn1);
+        size_btn1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 MainActivity mainActivity = (MainActivity) getActivity();
@@ -36,8 +36,8 @@ public class StorageSizeFragment extends Fragment {
 
             }
         });
-        Button battery_btn2 = (Button) view.findViewById(R.id.battery_btn2);
-        battery_btn2.setOnClickListener(new View.OnClickListener(){
+        Button size_btn2 = (Button) view.findViewById(R.id.size_btn2);
+        size_btn2.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 MainActivity mainActivity = (MainActivity) getActivity();
@@ -45,8 +45,8 @@ public class StorageSizeFragment extends Fragment {
 
             }
         });
-        Button battery_btn3 = (Button) view.findViewById(R.id.battery_btn3);
-        battery_btn3.setOnClickListener(new View.OnClickListener(){
+        Button size_btn3 = (Button) view.findViewById(R.id.size_btn3);
+        size_btn3.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 MainActivity mainActivity = (MainActivity) getActivity();
@@ -54,8 +54,8 @@ public class StorageSizeFragment extends Fragment {
 
             }
         });
-        Button battery_btn4 = (Button) view.findViewById(R.id.battery_btn4);
-        battery_btn4.setOnClickListener(new View.OnClickListener(){
+        Button size_btn4 = (Button) view.findViewById(R.id.size_btn4);
+        size_btn4.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 MainActivity mainActivity = (MainActivity) getActivity();
