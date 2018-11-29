@@ -10,11 +10,13 @@ import com.example.aa.engineering_brother.fragment.recommend.AgeFragment;
 import com.example.aa.engineering_brother.fragment.base.Fragment_One;
 import com.example.aa.engineering_brother.fragment.base.Fragment_Three;
 import com.example.aa.engineering_brother.fragment.base.Fragment_Two;
+import com.example.aa.engineering_brother.fragment.recommend.BatteryFragment;
 import com.example.aa.engineering_brother.fragment.recommend.DevelFragment;
 import com.example.aa.engineering_brother.fragment.recommend.GameFragment;
 import com.example.aa.engineering_brother.fragment.recommend.GraphicFragment;
 import com.example.aa.engineering_brother.fragment.recommend.PriceFragment;
 import com.example.aa.engineering_brother.fragment.recommend.StorageFragment;
+import com.example.aa.engineering_brother.fragment.recommend.StorageSizeFragment;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -35,6 +37,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public GraphicFragment graphicFragment = new GraphicFragment();
     public DevelFragment develFragment = new DevelFragment();
     public StorageFragment storageFragment = new StorageFragment();
+    public StorageSizeFragment storageSizeFragment = new StorageSizeFragment();
+    public BatteryFragment batteryFragment = new BatteryFragment();
 
 
     @Override
@@ -163,12 +167,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     .addToBackStack(null)
                     .commit();
         }
+
         else if (index == 31) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,storageFragment)
                     .addToBackStack(null)
                     .commit();
         }
-
+        else if (index == 41) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,storageSizeFragment)
+                    .addToBackStack(null)
+                    .commit();
+        }
+        else if (index == 51) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,batteryFragment)
+                    .addToBackStack(null)
+                    .commit();
+        }
 //        else if (index == 111) {
 //            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, )
 //                    .addToBackStack(null)
