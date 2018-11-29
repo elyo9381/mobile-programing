@@ -12,6 +12,7 @@ import com.example.aa.engineering_brother.fragment.base.Fragment_Three;
 import com.example.aa.engineering_brother.fragment.base.Fragment_Two;
 import com.example.aa.engineering_brother.fragment.recommend.BatteryFragment;
 import com.example.aa.engineering_brother.fragment.recommend.DevelFragment;
+import com.example.aa.engineering_brother.fragment.recommend.DisplaySizeFragment;
 import com.example.aa.engineering_brother.fragment.recommend.GameFragment;
 import com.example.aa.engineering_brother.fragment.recommend.GraphicFragment;
 import com.example.aa.engineering_brother.fragment.recommend.PriceFragment;
@@ -39,6 +40,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public StorageFragment storageFragment = new StorageFragment();
     public StorageSizeFragment storageSizeFragment = new StorageSizeFragment();
     public BatteryFragment batteryFragment = new BatteryFragment();
+    public DisplaySizeFragment displaySizeFragment = new DisplaySizeFragment();
 
 
     @Override
@@ -180,6 +182,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         else if (index == 51) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,batteryFragment)
+                    .addToBackStack(null)
+                    .commit();
+        }
+        else if (index == 61) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,displaySizeFragment)
                     .addToBackStack(null)
                     .commit();
         }
