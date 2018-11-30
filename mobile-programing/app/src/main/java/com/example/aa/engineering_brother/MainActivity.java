@@ -11,6 +11,7 @@ import com.example.aa.engineering_brother.fragment.base.Fragment_One;
 import com.example.aa.engineering_brother.fragment.base.Fragment_Three;
 import com.example.aa.engineering_brother.fragment.base.Fragment_Two;
 import com.example.aa.engineering_brother.fragment.recommend.BatteryFragment;
+import com.example.aa.engineering_brother.fragment.recommend.BrandFragment;
 import com.example.aa.engineering_brother.fragment.recommend.DevelFragment;
 import com.example.aa.engineering_brother.fragment.recommend.DisplaySizeFragment;
 import com.example.aa.engineering_brother.fragment.recommend.GameFragment;
@@ -43,6 +44,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public BatteryFragment batteryFragment = new BatteryFragment();
     public DisplaySizeFragment displaySizeFragment = new DisplaySizeFragment();
     public WeightFragment weightFragment = new WeightFragment();
+    public BrandFragment brandFragment = new BrandFragment();
 
 
     @Override
@@ -194,6 +196,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         else if (index == 71) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,weightFragment)
+                    .addToBackStack(null)
+                    .commit();
+        }
+        else if (index == 81) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,brandFragment)
                     .addToBackStack(null)
                     .commit();
         }
