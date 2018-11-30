@@ -18,6 +18,7 @@ import com.example.aa.engineering_brother.fragment.recommend.GraphicFragment;
 import com.example.aa.engineering_brother.fragment.recommend.PriceFragment;
 import com.example.aa.engineering_brother.fragment.recommend.StorageFragment;
 import com.example.aa.engineering_brother.fragment.recommend.StorageSizeFragment;
+import com.example.aa.engineering_brother.fragment.recommend.WeightFragment;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -41,6 +42,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public StorageSizeFragment storageSizeFragment = new StorageSizeFragment();
     public BatteryFragment batteryFragment = new BatteryFragment();
     public DisplaySizeFragment displaySizeFragment = new DisplaySizeFragment();
+    public WeightFragment weightFragment = new WeightFragment();
 
 
     @Override
@@ -187,6 +189,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         else if (index == 61) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,displaySizeFragment)
+                    .addToBackStack(null)
+                    .commit();
+        }
+        else if (index == 71) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,weightFragment)
                     .addToBackStack(null)
                     .commit();
         }
