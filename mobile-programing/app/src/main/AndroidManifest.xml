@@ -17,7 +17,12 @@
             </intent-filter>
         </activity>
         <activity android:name=".Button_Activity" />
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
+
+        <receiver
+            android:name=".MyReceiver"
+            android:enabled="true"
+            android:exported="true"></receiver>
     </application>
 
 </manifest>

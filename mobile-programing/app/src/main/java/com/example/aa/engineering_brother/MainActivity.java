@@ -1,5 +1,8 @@
 package com.example.aa.engineering_brother;
 
+import android.content.BroadcastReceiver;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -17,13 +20,14 @@ import com.example.aa.engineering_brother.fragment.recommend.DisplaySizeFragment
 import com.example.aa.engineering_brother.fragment.recommend.GameFragment;
 import com.example.aa.engineering_brother.fragment.recommend.GraphicFragment;
 import com.example.aa.engineering_brother.fragment.recommend.PriceFragment;
+import com.example.aa.engineering_brother.fragment.recommend.ResultFragment;
 import com.example.aa.engineering_brother.fragment.recommend.StorageFragment;
 import com.example.aa.engineering_brother.fragment.recommend.StorageSizeFragment;
 import com.example.aa.engineering_brother.fragment.recommend.WeightFragment;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-
+    private BroadcastReceiver mReceiver;
 
     private final int FRAGMENT1 = 1;
     private final int FRAGMENT2 = 2;
@@ -45,12 +49,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public DisplaySizeFragment displaySizeFragment = new DisplaySizeFragment();
     public WeightFragment weightFragment = new WeightFragment();
     public BrandFragment brandFragment = new BrandFragment();
+    public ResultFragment resultFragment = new ResultFragment();
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        mReceiver = new MyReceiver();
 
         // 위젯에 대한 참조
         bt_tab1 = (Button)findViewById(R.id.bt_tab1);
@@ -68,7 +76,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
+//    @Override
+//    public void sendBroadcast(Intent intent) {
+//        Intent intent1 = new Intent(MyReceiver.MY_ACTION);
+//        sendBroadcast(intent1);
+//    }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        IntentFilter filter = new IntentFilter();
+        filter.addAction(Intent.ACTION_POWER_CONNECTED);
+        filter.addAction(MyReceiver.MY_ACTION);
+        registerReceiver(mReceiver,filter);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        unregisterReceiver(mReceiver);
+    }
 
     private void callFragment(int frament_no){
 
@@ -132,11 +159,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, priceFragment)
                     .addToBackStack(null)
                     .commit();
+
+
         }
         else if (index == 11) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, ageFragment)
                     .addToBackStack(null)
                     .commit();
+            Intent intent1 = new Intent(MyReceiver.MY_ACTION);
+            intent1.putExtra("value","100미만");
+            sendBroadcast(intent1);
         }
         else if (index == 12) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, ageFragment)
@@ -204,6 +236,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     .addToBackStack(null)
                     .commit();
         }
+        else if (index == 91) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,resultFragment)
+                    .addToBackStack(null)
+                    .commit();
+        }
 //        else if (index == 111) {
 //            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, )
 //                    .addToBackStack(null)
@@ -218,8 +255,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, )
 //                    .addToBackStack(null)
 //                    .commit();
-//        }
 //        else if (index == 114) {
+//        }
 //            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, )
 //                    .addToBackStack(null)
 //                    .commit();

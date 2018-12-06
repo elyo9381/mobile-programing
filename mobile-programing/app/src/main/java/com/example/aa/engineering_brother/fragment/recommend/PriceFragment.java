@@ -1,6 +1,7 @@
 package com.example.aa.engineering_brother.fragment.recommend;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -10,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.example.aa.engineering_brother.MainActivity;
+import com.example.aa.engineering_brother.MyReceiver;
 import com.example.aa.engineering_brother.R;
 
 
@@ -33,7 +35,6 @@ public class PriceFragment extends Fragment {
             public void onClick(View v) {
                 MainActivity mainActivity = (MainActivity) getActivity();
                 mainActivity.onFragmentChanged(11);
-
             }
         });
 
