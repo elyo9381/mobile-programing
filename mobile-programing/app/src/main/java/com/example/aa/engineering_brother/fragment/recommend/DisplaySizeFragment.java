@@ -42,7 +42,7 @@ public class DisplaySizeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 MainActivity mainActivity = (MainActivity) getActivity();
-                mainActivity.onFragmentChanged(71);
+                mainActivity.onFragmentChanged(72);
 
             }
         });
@@ -51,7 +51,7 @@ public class DisplaySizeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 MainActivity mainActivity = (MainActivity) getActivity();
-                mainActivity.onFragmentChanged(71);
+                mainActivity.onFragmentChanged(73);
 
             }
         });

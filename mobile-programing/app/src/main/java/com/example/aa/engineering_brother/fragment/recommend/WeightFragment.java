@@ -41,7 +41,7 @@ public class WeightFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 MainActivity mainActivity = (MainActivity) getActivity();
-                mainActivity.onFragmentChanged(81);
+                mainActivity.onFragmentChanged(82);
 
             }
         });
@@ -50,7 +50,7 @@ public class WeightFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 MainActivity mainActivity = (MainActivity) getActivity();
-                mainActivity.onFragmentChanged(81);
+                mainActivity.onFragmentChanged(83);
 
             }
         });
@@ -59,7 +59,7 @@ public class WeightFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 MainActivity mainActivity = (MainActivity) getActivity();
-                mainActivity.onFragmentChanged(81);
+                mainActivity.onFragmentChanged(84);
 
             }
         });

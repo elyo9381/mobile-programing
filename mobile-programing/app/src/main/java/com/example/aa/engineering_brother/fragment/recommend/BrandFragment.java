@@ -42,7 +42,7 @@ public class BrandFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 MainActivity mainActivity = (MainActivity) getActivity();
-                mainActivity.onFragmentChanged(91);
+                mainActivity.onFragmentChanged(92);
 
             }
         });
@@ -52,7 +52,7 @@ public class BrandFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 MainActivity mainActivity = (MainActivity) getActivity();
-                mainActivity.onFragmentChanged(91);
+                mainActivity.onFragmentChanged(94);
 
             }
         });

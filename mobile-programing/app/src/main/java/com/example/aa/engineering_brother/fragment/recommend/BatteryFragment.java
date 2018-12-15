@@ -41,7 +41,7 @@ public class BatteryFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 MainActivity mainActivity = (MainActivity) getActivity();
-                mainActivity.onFragmentChanged(61);
+                mainActivity.onFragmentChanged(62);
 
             }
         });
@@ -50,7 +50,7 @@ public class BatteryFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 MainActivity mainActivity = (MainActivity) getActivity();
-                mainActivity.onFragmentChanged(61);
+                mainActivity.onFragmentChanged(63);
 
             }
         });
@@ -59,7 +59,7 @@ public class BatteryFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 MainActivity mainActivity = (MainActivity) getActivity();
-                mainActivity.onFragmentChanged(61);
+                mainActivity.onFragmentChanged(64);
 
             }
         });

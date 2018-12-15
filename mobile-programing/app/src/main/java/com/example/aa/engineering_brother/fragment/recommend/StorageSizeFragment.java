@@ -41,7 +41,7 @@ public class StorageSizeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 MainActivity mainActivity = (MainActivity) getActivity();
-                mainActivity.onFragmentChanged(51);
+                mainActivity.onFragmentChanged(52);
 
             }
         });
@@ -50,7 +50,7 @@ public class StorageSizeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 MainActivity mainActivity = (MainActivity) getActivity();
-                mainActivity.onFragmentChanged(51);
+                mainActivity.onFragmentChanged(53);
 
             }
         });
@@ -59,7 +59,7 @@ public class StorageSizeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 MainActivity mainActivity = (MainActivity) getActivity();
-                mainActivity.onFragmentChanged(51);
+                mainActivity.onFragmentChanged(54);
 
             }
         });

@@ -42,7 +42,7 @@ public class StorageFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 MainActivity mainActivity = (MainActivity) getActivity();
-                mainActivity.onFragmentChanged(41);
+                mainActivity.onFragmentChanged(42);
 
             }
         });
